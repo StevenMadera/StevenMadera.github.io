@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Integrado de Gestion - Bavaria</title>
+    <meta name="description" content="Sistema Integrado de Gestion de Bavaria: procesos, riesgos, ambiente, RACI y analisis PESTEL.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="logo_bavaria.png">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar-logo" href="#inicio" aria-label="Inicio Bavaria">
+            <img src="images/bavaria.png" alt="Logo Bavaria">
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#estadisticas">Indicadores</a></li>
+            <li><a href="#sobre-bavaria">Sobre Bavaria</a></li>
+            <li><a href="#objetivos-sig">Objetivos SIG</a></li>
+            <li><a href="#sostenibilidad">Sostenibilidad</a></li>
+            <li><a href="#mapa-procesos">Procesos</a></li>
+            <li><a href="#matriz-riesgos">Riesgos</a></li>
+            <li><a href="#matriz-ambiental">Ambiental</a></li>
+            <li><a href="#matriz-raci">RACI</a></li>
+            <li><a href="#pestel">PESTEL</a></li>
+            <li><a href="#conclusiones">Conclusiones</a></li>
+        </ul>
+        <div class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-decor" aria-hidden="true">
+            <span class="decor-dot decor-dot-a"></span>
+            <span class="decor-dot decor-dot-b"></span>
+            <span class="decor-ring"></span>
+        </div>
+        <div class="hero-content">
+            <p class="hero-kicker"><i class="fa-solid fa-industry"></i> Sistema Integrado de Gestion</p>
+            <h1>Gobernanza, riesgo y sostenibilidad en Bavaria</h1>
+            <p class="hero-lead">Analisis academico con enfoque corporativo sobre procesos, matriz de riesgos, gestion ambiental y estructura de responsabilidades.</p>
+            <div class="hero-actions">
+                <a href="#mapa-procesos" class="btn btn-primary" data-tooltip="Explora el mapa de procesos">Ver analisis</a>
+                <a href="#conclusiones" class="btn btn-secondary" data-tooltip="Ir al cierre del informe">Resumen ejecutivo</a>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric-card">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <h3>Procesos</h3>
+                    <p><span class="counter" data-target="3" data-suffix="+">0</span> lineas de gestion</p>
+                </div>
+                <div class="metric-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Riesgos</h3>
+                    <p><span class="counter" data-target="12" data-suffix="+">0</span> focos criticos</p>
+                </div>
+                <div class="metric-card">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h3>Ambiental</h3>
+                    <p><span class="counter" data-target="4">0</span> frentes sostenibles</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="images/soste_bavaria.png" alt="Sostenibilidad Bavaria" class="hero-logo">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section section-alt section-compact" id="estadisticas">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-chart-simple"></i> Indicadores Estratégicos</h2>
+                <p>Vista ejecutiva del desempeño del sistema integrado de gestion con foco corporativo.</p>
+            </div>
+            <div class="stats-grid">
+                <article class="stat-card card">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <h3><span class="counter" data-target="24" data-suffix="+">0</span></h3>
+                    <p>Procesos articulados en el mapa operativo</p>
+                </article>
+                <article class="stat-card card">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <h3><span class="counter" data-target="96" data-suffix="%">0</span></h3>
+                    <p>Cobertura estimada de controles de riesgo</p>
+                </article>
+                <article class="stat-card card">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3><span class="counter" data-target="32" data-suffix="%">0</span></h3>
+                    <p>Meta de eficiencia ambiental en recursos</p>
+                </article>
+                <article class="stat-card card">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <h3><span class="counter" data-target="8">0</span></h3>
+                    <p>Frentes de trabajo con roles RACI definidos</p>
+                </article>
+            </div>
+            <div class="visual-dashboard" data-parallax="0.08">
+                <article class="card chart-card">
+                    <h3><i class="fa-solid fa-chart-column"></i> Madurez de Gestion</h3>
+                    <div class="bar-group">
+                        <div class="bar-item"><span>Procesos</span><div class="bar"><i style="width: 88%"></i></div></div>
+                        <div class="bar-item"><span>Riesgos</span><div class="bar"><i style="width: 80%"></i></div></div>
+                        <div class="bar-item"><span>Ambiental</span><div class="bar"><i style="width: 76%"></i></div></div>
+                    </div>
+                </article>
+                <article class="card chart-card donut-card">
+                    <h3><i class="fa-solid fa-circle-nodes"></i> Cumplimiento Global</h3>
+                    <div class="donut-chart"><span>84%</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-compact" id="sobre-bavaria">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-building"></i> Sobre Bavaria</h2>
+            </div>
+                <div class="about-grid">
+                    <article class="card">
+                        <h3>Historia y Trayectoria</h3>
+                                            <p>Bavaria es la cervecera más grande de Colombia, fundada en 1889, reconocida por su liderazgo en innovación, sostenibilidad y calidad. Forma parte del grupo AB InBev, con presencia nacional y exportaciones a mercados internacionales.</p>
+
+                        <p>Desde su fundación en Bogotá, Bavaria ha impulsado el desarrollo industrial y social del país, consolidando marcas icónicas como Águila, Poker, Club Colombia y Pony Malta.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Impacto y Sostenibilidad</h3>
+                        <ul class="icon-list">
+                            <li><i class="fa-solid fa-leaf"></i><span>Programas de reducción de huella ambiental y gestión responsable del agua.</span></li>
+                            <li><i class="fa-solid fa-users"></i><span>Generación de empleo y apoyo a comunidades locales.</span></li>
+                            <li><i class="fa-solid fa-award"></i><span>Reconocimientos por calidad, innovación y responsabilidad social.</span></li>
+                        </ul>
+                    </article>
+                </div>
+            <div class="illustration-strip" aria-hidden="true" data-parallax="0.06">
+                <div><i class="fa-solid fa-industry"></i><span>Operacion</span></div>
+                <div><i class="fa-solid fa-flask"></i><span>Calidad</span></div>
+                <div><i class="fa-solid fa-truck-fast"></i><span>Logistica</span></div>
+                <div><i class="fa-solid fa-handshake"></i><span>Impacto</span></div>
+            </div>
+        </section>
+
+        <section class="section section-alt section-compact" id="objetivos-sig">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-bullseye"></i> Objetivos del Sistema de Gestión</h2>
+                    <p>Objetivos alineados a la visión de Bavaria: excelencia operativa, sostenibilidad, innovación y responsabilidad social.</p>
+            </div>
+                <div class="goals-grid">
+                    <article class="goal-card card">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <h3>Excelencia Operativa</h3>
+                        <p>Garantizar procesos eficientes y de alta calidad, impulsando la productividad y la competitividad en el sector cervecero.</p>
+                    </article>
+                    <article class="goal-card card">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h3>Sostenibilidad Ambiental</h3>
+                        <p>Reducir el impacto ambiental mediante el uso responsable de recursos, gestión del agua y reducción de emisiones.</p>
+                    </article>
+                    <article class="goal-card card">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h3>Innovación</h3>
+                        <p>Fomentar la innovación en productos, procesos y modelos de negocio para mantener el liderazgo en el mercado.</p>
+                    </article>
+                    <article class="goal-card card">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Responsabilidad Social</h3>
+                        <p>Promover el bienestar de colaboradores, comunidades y consumidores, apoyando iniciativas sociales y educativas.</p>
+                    </article>
+                </div>
+        </section>
+
+        <section class="section section-compact" id="sostenibilidad">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-earth-americas"></i> Sostenibilidad Corporativa</h2>
+                <p>Compromisos clave para una operación responsable y de largo plazo.</p>
+            </div>
+            <div class="sustainability-grid">
+                <article class="card sustainability-card">
+                    <h3><i class="fa-solid fa-droplet"></i> Agua</h3>
+                    <p>Proyectos orientados a optimizacion hidrica y eficiencia de consumo en planta.</p>
+                </article>
+                <article class="card sustainability-card">
+                    <h3><i class="fa-solid fa-wind"></i> Emisiones</h3>
+                    <p>Monitoreo de huella ambiental y transición progresiva a operaciones de menor impacto.</p>
+                </article>
+                <article class="card sustainability-card">
+                    <h3><i class="fa-solid fa-recycle"></i> Circularidad</h3>
+                    <p>Fortalecimiento de reciclaje, reaprovechamiento y gestión responsable de residuos.</p>
+                </article>
+            </div>
+            <article class="card eco-meter" data-parallax="0.07">
+                <h3><i class="fa-solid fa-wave-square"></i> Indicadores Ambientales</h3>
+                <div class="meter-row"><span>Eficiencia hidrica</span><div class="meter"><i style="width: 74%"></i></div></div>
+                <div class="meter-row"><span>Reduccion de CO2</span><div class="meter"><i style="width: 62%"></i></div></div>
+                <div class="meter-row"><span>Aprovechamiento</span><div class="meter"><i style="width: 79%"></i></div></div>
+            </article>
+        </section>
+
+        <section class="section" id="mapa-procesos">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-diagram-project"></i> Mapa de Procesos</h2>
+                <p>Vista general de la cadena de valor y su estructura funcional.</p>
+            </div>
+            <div class="content-grid">
+                <div class="media-card">
+                    <img src="images/mapa_procesos.jpg" alt="Mapa de Procesos Bavaria" class="responsive-img">
+                </div>
+                <article class="card">
+                    <h3>Modelo de procesos</h3>
+                    <ul class="icon-list">
+                        <li><i class="fa-solid fa-bullseye"></i><span><strong>Estrategicos:</strong> orientan direccion y objetivos corporativos.</span></li>
+                        <li><i class="fa-solid fa-gear"></i><span><strong>Tacticos:</strong> convierten estrategia en ejecucion operativa.</span></li>
+                        <li><i class="fa-solid fa-handshake-angle"></i><span><strong>Apoyo:</strong> habilitan recursos y continuidad del negocio.</span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="matriz-riesgos">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-triangle-exclamation"></i> Matriz de Riesgos</h2>
+                <p>Marco de evaluacion para anticipar eventos criticos y su severidad.</p>
+            </div>
+            <div class="content-grid">
+                <div class="media-card risk-img-container">
+                    <img src="images/matriz riesgos.jpg" alt="Matriz de Riesgos Bavaria" class="responsive-img risk-img">
+                    <div class="tooltip" id="risk-tooltip">Probabilidad vs impacto para priorizar riesgos estrategicos y operativos.</div>
+                </div>
+                <article class="card">
+                    <h3>Gestion preventiva</h3>
+                    <p>La matriz permite identificar, evaluar y priorizar riesgos para definir controles, asignar responsables y reducir la exposicion global de la organizacion.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="matriz-ambiental">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-recycle"></i> Matriz de Aspectos Ambientales</h2>
+                <p>Control de impactos con foco en eficiencia de recursos y cumplimiento regulatorio.</p>
+            </div>
+            <div class="content-grid">
+                <div class="media-card">
+                    <img src="images/ambientales.jpg" alt="Matriz Ambiental Bavaria" class="responsive-img">
+                </div>
+                <article class="card">
+                    <h3>Aspectos clave</h3>
+                    <ul class="icon-list">
+                        <li><i class="fa-solid fa-droplet"></i><span><strong>Agua:</strong> optimizacion del consumo en procesos productivos.</span></li>
+                        <li><i class="fa-solid fa-cloud"></i><span><strong>CO2:</strong> monitoreo de emisiones y planes de reduccion.</span></li>
+                        <li><i class="fa-solid fa-trash-can-arrow-up"></i><span><strong>Residuos:</strong> gestion responsable y circularidad.</span></li>
+                        <li><i class="fa-solid fa-scale-balanced"></i><span><strong>Cumplimiento:</strong> control normativo y mejora continua.</span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="matriz-raci">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-people-group"></i> Matriz RACI</h2>
+                <p>Estructura de gobernanza para una toma de decisiones clara y trazable.</p>
+            </div>
+            <div class="content-grid">
+                <div class="media-card">
+                    <img src="images/matriz raci.jpg" alt="Matriz RACI Bavaria" class="responsive-img">
+                </div>
+                <article class="card raci-grid">
+                    <div><h3>R</h3><p>Responsable</p></div>
+                    <div><h3>A</h3><p>Aprobador</p></div>
+                    <div><h3>C</h3><p>Consultado</p></div>
+                    <div><h3>I</h3><p>Informado</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="pestel">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-chart-line"></i> Analisis PESTEL</h2>
+                <p>Factores externos que condicionan la competitividad y sostenibilidad del negocio.</p>
+            </div>
+            <div class="media-card section-media">
+                <img src="images/Matriz PESTEL.png" alt="PESTEL Bavaria" class="responsive-img">
+            </div>
+            <div class="pestel-cards">
+                <div class="card pestel-card"><h3><i class="fa-solid fa-landmark"></i> Politico</h3><p>Regulaciones, impuestos y politicas sectoriales.</p></div>
+                <div class="card pestel-card"><h3><i class="fa-solid fa-coins"></i> Economico</h3><p>Inflacion, tasa de interes y demanda del mercado.</p></div>
+                <div class="card pestel-card"><h3><i class="fa-solid fa-users"></i> Social</h3><p>Cultura, habitos de consumo y tendencias demograficas.</p></div>
+                <div class="card pestel-card"><h3><i class="fa-solid fa-microchip"></i> Tecnologico</h3><p>Automatizacion, digitalizacion e innovacion operativa.</p></div>
+                <div class="card pestel-card"><h3><i class="fa-solid fa-seedling"></i> Ambiental</h3><p>Sostenibilidad, eficiencia de recursos y cambio climatico.</p></div>
+                <div class="card pestel-card"><h3><i class="fa-solid fa-gavel"></i> Legal</h3><p>Normativa laboral, cumplimiento y gobierno corporativo.</p></div>
+            </div>
+        </section>
+
+        <section class="section" id="conclusiones">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-circle-check"></i> Conclusiones</h2>
+                <p>Hallazgos principales del Sistema Integrado de Gestion.</p>
+            </div>
+            <article class="card">
+                <ul class="icon-list">
+                    <li><i class="fa-solid fa-check"></i><span>Integrar sistemas de gestion mejora eficiencia y sostenibilidad empresarial.</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>La gestion ambiental fortalece reputacion, cumplimiento y resiliencia operativa.</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>Procesos y riesgos bien definidos aumentan competitividad y control organizacional.</span></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <button id="btn-top" title="Volver arriba" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="images/bavaria.png" alt="Logo Bavaria">
+                <div>
+                    <h3>Bavaria - Sistema Integrado de Gestion</h3>
+                    <p>Universidad Libre - 2026</p>
+                </div>
+            </div>
+            <p class="footer-subtitle">Equipo academico:</p>
+            <ul class="footer-list">
+                <li>Melany de los Angeles Ortiz Ruiz</li>
+                <li>Sofia Lopez Yepes</li>
+                <li>Sara Sofia Garzon Fontecha</li>
+                <li>Steven Andres Madera Martinez</li>
+                <li>Valeria Paola Corzo Mendez</li>
+                <li>Ingrid Victoria Oviedo Narvaez</li>
+            </ul>
+            <div class="footer-social">
+                <a href="#" title="Facebook" aria-label="Facebook" data-tooltip="Canal oficial en Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" title="Instagram" aria-label="Instagram" data-tooltip="Contenido visual de marca"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" title="LinkedIn" aria-label="LinkedIn" data-tooltip="Perfil corporativo profesional"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
