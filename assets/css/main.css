@@ -1,4 +1,41 @@
 ﻿/* =========================
+   CSV Table Styles
+========================= */
+.csv-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: var(--surface-card-strong);
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    font-size: 1rem;
+    table-layout: auto;
+}
+.csv-table th:first-child, .csv-table td:first-child {
+    min-width: 220px;
+    max-width: 400px;
+}
+.csv-table th, .csv-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-accent);
+    text-align: left;
+}
+.csv-table th {
+    background: var(--color-red-600);
+    color: var(--color-white);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+.csv-table tr:nth-child(even) td {
+    background: var(--surface-page-b);
+}
+.csv-table tr:hover td {
+    background: var(--color-red-700);
+    color: var(--color-white);
+    transition: background var(--ease-standard);
+}
+/* =========================
    Design Tokens
 ========================= */
 :root {
@@ -260,17 +297,26 @@ body.is-loaded .navbar {
 .decor-dot-a {
     top: 14%;
     right: 11%;
-    width: 14px;
-    height: 14px;
+    width: 100%;
+    border-collapse: separate;
+    margin: 2rem 0;
+    background: var(--surface-card-strong);
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius-md);
+    overflow: auto;
+    font-size: 1rem;
+    table-layout: auto;
+    max-width: 100%;
 }
-
-.decor-dot-b {
-    bottom: 18%;
-    right: 32%;
-    width: 9px;
-    height: 9px;
+.csv-table th, .csv-table td {
+    padding: 0.5rem 0.5rem;
+    border: 1px solid var(--border-accent);
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-word;
+    min-width: 60px;
+    max-width: 300px;
 }
-
 .decor-ring {
     right: 8%;
     bottom: 9%;

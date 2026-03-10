@@ -74,6 +74,7 @@
     </header>
 
     <main class="main-content">
+        
         <section class="section section-alt section-compact" id="estadisticas">
             <div class="section-title">
                 <h2><i class="fa-solid fa-chart-simple"></i> Indicadores Estratégicos</h2>
@@ -127,6 +128,8 @@
                                             <p>Bavaria es la cervecera más grande de Colombia, fundada en 1889, reconocida por su liderazgo en innovación, sostenibilidad y calidad. Forma parte del grupo AB InBev, con presencia nacional y exportaciones a mercados internacionales.</p>
 
                         <p>Desde su fundación en Bogotá, Bavaria ha impulsado el desarrollo industrial y social del país, consolidando marcas icónicas como Águila, Poker, Club Colombia y Pony Malta.</p>
+                                            <button class="btn btn-policy" id="btn-policy" aria-label="Mostrar política">Ver Política Integrada de Gestión</button>
+
                     </article>
                     <article class="card">
                         <h3>Impacto y Sostenibilidad</h3>
@@ -137,6 +140,26 @@
                         </ul>
                     </article>
                 </div>
+                <div class="policy-section">
+                    <div class="policy-content card" id="policy-content" style="display:none;">
+                        <h3>POLÍTICA INTEGRADA DE GESTIÓN</h3>
+                        <p><strong>Bavaria S.A. - Bogotá D.C.</strong></p>
+                        <p>En Bavaria S.A., compañía líder en la producción y comercialización de bebidas en Colombia y parte del grupo AB InBev, estamos comprometidos con la excelencia en la gestión de nuestros procesos, la satisfacción de nuestros clientes y consumidores, la sostenibilidad ambiental, el bienestar de nuestros colaboradores y el cumplimiento de los requisitos legales y normativos aplicables.</p>
+                        <p>Nuestra Política Integrada de Gestión se fundamenta en la planeación estratégica de la organización y en un enfoque basado en procesos, alineado con los estándares internacionales ISO 9001, ISO 14001 y OHSAS 18001, los cuales orientan la gestión de la calidad, el desempeño ambiental y la seguridad y salud en el trabajo dentro de la organización.</p>
+                        <p>A través de la implementación y mejora continua de nuestro Sistema Integrado de Gestión, Bavaria S.A. se compromete a:</p>
+                        <ol>
+                            <li>Garantizar la calidad de los productos y procesos, asegurando el cumplimiento de estándares nacionales e internacionales mediante la aplicación de buenas prácticas en la producción, logística y distribución de nuestras bebidas.</li>
+                            <li>Promover la mejora continua del Sistema Integrado de Gestión, fortaleciendo la eficiencia y efectividad de los procesos estratégicos, misionales y de apoyo, con el propósito de generar valor sostenible para clientes, colaboradores, accionistas y demás partes interesadas.</li>
+                            <li>Gestionar responsablemente los impactos ambientales, implementando prácticas orientadas al uso eficiente de los recursos naturales, la optimización del consumo de agua y energía, la reducción de emisiones y residuos, y la protección del entorno donde operamos.</li>
+                            <li>Proteger la seguridad y la salud de los trabajadores, mediante la identificación, evaluación y control de riesgos laborales, promoviendo condiciones de trabajo seguras y saludables que prevengan accidentes y enfermedades laborales.</li>
+                            <li>Cumplir con la legislación vigente y otros requisitos aplicables, garantizando una gestión ética, responsable y transparente en todas las actividades de la organización.</li>
+                            <li>Fortalecer el desarrollo y la participación del talento humano, promoviendo la capacitación, el liderazgo, el trabajo en equipo y la cultura de prevención dentro de la organización.</li>
+                            <li>Fomentar relaciones responsables con clientes, proveedores y comunidades, contribuyendo al desarrollo económico, social y ambiental de las regiones donde Bavaria S.A. desarrolla sus operaciones.</li>
+                        </ol>
+                        <p>Esta política es comunicada, comprendida y aplicada en todos los niveles de la organización y constituye el marco de referencia para el establecimiento de los objetivos del Sistema Integrado de Gestión. Asimismo, es revisada periódicamente para asegurar su adecuación, vigencia y alineación con la estrategia corporativa y los principios de sostenibilidad de Bavaria S.A.</p>
+                    </div>
+                </div>
+                </div>
             <div class="illustration-strip" aria-hidden="true" data-parallax="0.06">
                 <div><i class="fa-solid fa-industry"></i><span>Operacion</span></div>
                 <div><i class="fa-solid fa-flask"></i><span>Calidad</span></div>
@@ -145,6 +168,8 @@
             </div>
         </section>
 
+
+        
         <section class="section section-alt section-compact" id="objetivos-sig">
             <div class="section-title">
                 <h2><i class="fa-solid fa-bullseye"></i> Objetivos del Sistema de Gestión</h2>
@@ -220,6 +245,14 @@
                 </article>
             </div>
         </section>
+
+            <section class="section section-compact" id="csv-viewer">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-table"></i> Matriz de Roles</h2>
+                    <p>Tabla de roles y actividades del sistema de gestión.</p>
+                </div>
+                <div id="csv-table-container"></div>
+            </section>
 
         <section class="section" id="matriz-riesgos">
             <div class="section-title">
@@ -341,5 +374,60 @@
     </footer>
 
     <script type="module" src="assets/js/main.js"></script>
+    <script>
+    // Script para mostrar/ocultar la política y mostrar el CSV
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnPolicy = document.getElementById('btn-policy');
+        const policyContent = document.getElementById('policy-content');
+        btnPolicy.addEventListener('click', function() {
+            if (policyContent.style.display === 'none') {
+                policyContent.style.display = 'block';
+                btnPolicy.textContent = 'Ocultar Política Integrada de Gestión';
+            } else {
+                policyContent.style.display = 'none';
+                btnPolicy.textContent = 'Ver Política Integrada de Gestión';
+            }
+        });
+
+        // Mostrar CSV fijo con tildes correctas
+        fetch('assets/Matriz_Roles (1).csv')
+            .then(response => response.arrayBuffer())
+            .then(buffer => {
+                const decoder = new TextDecoder('utf-8');
+                const text = decoder.decode(buffer);
+                const csvTableContainer = document.getElementById('csv-table-container');
+                const rows = text.split('\n').filter(r => r.trim());
+                const table = document.createElement('table');
+                table.className = 'csv-table';
+                rows.forEach((row, idx) => {
+                    const tr = document.createElement('tr');
+                    row.split(',').forEach(cell => {
+                        const td = document.createElement(idx === 0 ? 'th' : 'td');
+                        td.textContent = cell.trim();
+                        tr.appendChild(td);
+                    });
+                    table.appendChild(tr);
+                });
+                csvTableContainer.innerHTML = '';
+                csvTableContainer.appendChild(table);
+            });
+    });
+    </script>
+    <script>
+    // Script para mostrar/ocultar la política
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnPolicy = document.getElementById('btn-policy');
+        const policyContent = document.getElementById('policy-content');
+        btnPolicy.addEventListener('click', function() {
+            if (policyContent.style.display === 'none') {
+                policyContent.style.display = 'block';
+                btnPolicy.textContent = 'Ocultar Política Integrada de Gestión';
+            } else {
+                policyContent.style.display = 'none';
+                btnPolicy.textContent = 'Ver Política Integrada de Gestión';
+            }
+        });
+    });
+    </script>
 </body>
 </html>
